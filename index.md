@@ -1,5 +1,7 @@
-Here you can say lots of fun things about your site.
+Welcome to my blog everyone
 
-Maybe say a some things about yourself.
+I am currently a Student at the University of Connecticut with an interest in Data with programming mixed in.
 
-Or maybe what you plan to blog about.
+This blog is personal for me and will be used to track my progress as I countinue to learn.
+
+My main goal is just to keep growing my skills and I want this blog to represent that as I countinue this journey. 
