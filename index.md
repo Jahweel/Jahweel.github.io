@@ -1,4 +1,4 @@
-Welcome to my blog everyone
+Welcome to my blog everyone,
 
 I am currently a Student at the University of Connecticut with an interest in Data with programming mixed in.
 
