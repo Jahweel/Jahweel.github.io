@@ -1,13 +1,13 @@
 ## Insurance Database Project 
 
->:warning: Note: this project was originally done within Oracle Developer but has been transitioned to PostgreSQL. Some Queries and diagrams may be specific to one tool rather than the other and will be noted as such. 
+>Note: this project was originally done within Oracle Developer but has been transitioned to PostgreSQL. Some Queries and diagrams may be specific to one tool rather than the other and will be noted as such. 
 
 ### :dart: Objective
 
 This is my first SQL project where I create a model database to help me gain a better understanding of relational database concepts, including table design, constraints, cardinality, and the relationships they form. The reason behind modeling the database based on insurance data is to help me apply the same database concepts towards the real-world situation, 
 as well as business questions scenarios. 
 
-### :microscope: Background and Research 
+### Background and Research 
 
 As stated before the idea of this project is to create my insurance database. To start, some research was needed to understand what type of data an insurance
 a company might collect on its customers. The conclusion was made to focus on the type of policies offered specifically 3: 
@@ -21,13 +21,13 @@ I must keep in mind that the focus of the data and its origins would be from the
 ![This is an image](https://i.imgur.com/xngn0W3.png)
 >Note: This is a final ERD model from Oracle Developer and serves as a starting point to understanding each table relationship within the database. I will go over the creation of each table in further detail below. 
 
-## :bangbang: Data 
+## Data 
 
 Data used in the project can be found in each respective tables folder. They are marked in csv files.
 [Data Folders](https://github.com/Jahweel/Insurance_Database)
 
-### :desktop_computer: Table Creation 
-  #### 1. Customer Table 
+### Table Creation 
+ 1. Customer Table 
 
 The first table to be created would be the customer's table. This table would be the center of the database as in a real-world scenario customers/policyholders would be the center of a companies focus. Before I begin it's a good idea to go over certain terms and definitions that will come up repeatedly during each table creation 
 
@@ -197,7 +197,7 @@ CREATE TABLE travel_policy
 ALTER TABLE travel_policy 
 RENAME policy_number TO travel_policy_number;
 ```
-### :handshake: **Table Relationships**
+### **Table Relationships**
 
 Understanding the relationships between tables will help generate better queries. To explain this I will focus on the customer and travel tables (*The same principle will apply to customers and other tables*) below: 
 
@@ -206,7 +206,7 @@ Understanding the relationships between tables will help generate better queries
 
 The ERD shown in the image above shows a ternary relationship between the 3 tables. Based on the diagram it can be read like this: **A customer purchases insurance for a planned travel date.** The customer, travel, and travel insurance tables are all independent and do not have any foreign keys. However, the relationship that they form creates an additional associative table known as the travel policy. This table features foreign keys from the other three tables, creating its primary key. Now with the addition of this new table the diagram and be read like this: **A customer purchases an insurance policy with travel insurance for a travel date.**
 
-## :hammer_and_wrench: **Queries** 
+## **Queries** 
 Now here comes the fun part, queries. I went through many queries from simple ones just to see if I could pull information from a table to my finalize queries that are shown below. The main objective is to create queries that might help answer certain business questions or at least provide value to the business. **It is extremely important to not lose sight of the business objective** 
 >:warning: Certain queries below will only run on Oracle due to features being specific to it, and will be noted 
 
@@ -227,7 +227,7 @@ CROSS JOIN item_insurance i;
   ![This is a image](https://imgur.com/AlvlhTJ.png) 
   >The output of the queries presents us with the average cost of a deductible based on insurance type. This would be beneficial to know where customers would spend the most between events, travel, and valuable items.  
 
-  ### **Query 2** 
+   **Query 2** 
   
 ```tsql 
 -- Looking for trends between event insurance and attendees 
@@ -245,7 +245,7 @@ ORDER BY e.number_attendees DESC;
   ![This is a image](https://imgur.com/QgW7uIs.png)
   >The result of this query shows us a trend between an event insurance plan and the attendees it has. What we can see is that liability and Cancellation Insurance is typically used with larger events. This gives us an idea of how different plans are being used. 
 
-  ### **Query 3** 
+   **Query 3** 
   
 ```tsql 
 -- Finding insurance plans based on deductibles 
@@ -266,7 +266,7 @@ HAVING AVG(i.i_deductibles)>='&deductible'
    ![This is a image](https://imgur.com/XLNlSm2.png)
 > This query used a double join to pull outputs from the 3 valuable items table. The query will ask for user input for a deductible amount. In the query, I ran I input 100 meaning this query will only show insurance plans that have an average deductible of $100. 
 
-  ### **Query 4** 
+   **Query 4** 
 
 ```tsql
 -- Finding customer information based on coverage start and date 
@@ -288,6 +288,6 @@ ORDER BY c.l_name;
   
   This query followed query 3 by asking the user for a prompt, however it takes it a step further and asks for additional input. This is because we are using the between the function to create a range between two dates. This query produces results to show customer information based on their travel coverage start and end date.
  
-## :checkered_flag: Final Thoughts 
+## Final Thoughts 
 
 Overall many trials and errors when trying to get everything working, but I'm happy with this current product. My goal future is to come back to this in the future with additional tools make improvements to the overall tables and create more efficient SQL scripts. I truly appreciate anyone who managed to make it to the end of this, I hope to present more projects on here soon. 
