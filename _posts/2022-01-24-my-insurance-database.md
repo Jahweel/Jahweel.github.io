@@ -21,13 +21,13 @@ I must keep in mind that the focus of the data and its origins would be from the
 ![This is an image](https://i.imgur.com/xngn0W3.png)
 >Note: This is a final ERD model from Oracle Developer and serves as a starting point to understanding each table relationship within the database. I will go over the creation of each table in further detail below. 
 
-## Data 
+### **Data** 
 
 Data used in the project can be found in each respective tables folder. They are marked in csv files.
 [Data Folders](https://github.com/Jahweel/Insurance_Database)
 
 ### **Table Creation**
- 1. Customer Table 
+ **1. Customer Table** 
 
 The first table to be created would be the customer's table. This table would be the center of the database as in a real-world scenario customers/policyholders would be the center of a companies focus. Before I begin it's a good idea to go over certain terms and definitions that will come up repeatedly during each table creation 
 
