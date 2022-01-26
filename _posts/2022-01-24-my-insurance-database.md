@@ -2,7 +2,7 @@
 
 >Note: this project was originally done within Oracle Developer but has been transitioned to PostgreSQL. Some Queries and diagrams may be specific to one tool rather than the other and will be noted as such. 
 
-### :dart: Objective
+### Objective
 
 This is my first SQL project where I create a model database to help me gain a better understanding of relational database concepts, including table design, constraints, cardinality, and the relationships they form. The reason behind modeling the database based on insurance data is to help me apply the same database concepts towards the real-world situation, 
 as well as business questions scenarios. 
