@@ -208,7 +208,7 @@ The ERD shown in the image above shows a ternary relationship between the 3 tabl
 
 ## **Queries** 
 Now here comes the fun part, queries. I went through many queries from simple ones just to see if I could pull information from a table to my finalize queries that are shown below. The main objective is to create queries that might help answer certain business questions or at least provide value to the business. **It is extremely important to not lose sight of the business objective** 
->:warning: Certain queries below will only run on Oracle due to features being specific to it, and will be noted 
+> Certain queries below will only run on Oracle due to features being specific to it, and will be noted 
 
   ### **Query 1** 
 
@@ -257,7 +257,7 @@ ON (i.item_insurance_id=p.item_insurance_id)
 GROUP BY i.i_type 
 HAVING AVG(i.i_deductibles)>='&deductible' 
 ``` 
->:warning: Note: this query is specific to Oracle SQL Developer. The following query will prompt user input through the "&" symbol. 
+> Note: this query is specific to Oracle SQL Developer. The following query will prompt user input through the "&" symbol. 
 
   **Output** 
   
@@ -278,7 +278,7 @@ ON (t.zip_code=p.zip_code)
 WHERE p.t_coverage_start_date BETWEEN '&DATE1' AND '&DATE2' 
 ORDER BY c.l_name; 
 ```
->:warning: Note: this query is specific to Oracle SQL Developer. The following query will prompt user input through the "&" symbol. 
+> Note: this query is specific to Oracle SQL Developer. The following query will prompt user input through the "&" symbol. 
 
   **Output** 
   
