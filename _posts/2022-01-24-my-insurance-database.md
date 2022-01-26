@@ -2,12 +2,12 @@
 
 >Note: this project was originally done within Oracle Developer but has been transitioned to PostgreSQL. Some Queries and diagrams may be specific to one tool rather than the other and will be noted as such. 
 
-### Objective
+### **Objective**
 
 This is my first SQL project where I create a model database to help me gain a better understanding of relational database concepts, including table design, constraints, cardinality, and the relationships they form. The reason behind modeling the database based on insurance data is to help me apply the same database concepts towards the real-world situation, 
 as well as business questions scenarios. 
 
-### Background and Research 
+### **Background and Research**
 
 As stated before the idea of this project is to create my insurance database. To start, some research was needed to understand what type of data an insurance
 a company might collect on its customers. The conclusion was made to focus on the type of policies offered specifically 3: 
@@ -26,7 +26,7 @@ I must keep in mind that the focus of the data and its origins would be from the
 Data used in the project can be found in each respective tables folder. They are marked in csv files.
 [Data Folders](https://github.com/Jahweel/Insurance_Database)
 
-### Table Creation 
+### **Table Creation**
  1. Customer Table 
 
 The first table to be created would be the customer's table. This table would be the center of the database as in a real-world scenario customers/policyholders would be the center of a companies focus. Before I begin it's a good idea to go over certain terms and definitions that will come up repeatedly during each table creation 
@@ -70,7 +70,7 @@ Within the customer table, the following information would be housed whenever a 
 Each column name is based on the type of information that the column would have. For example, the **f_name** column contains customers **first name**, This naming convention will be applied to all tables.
 
 
-  #### 2. Events, Valuable Items, Travel Tables  
+  **2. Events, Valuable Items, Travel Tables** 
 
 The following tables are the specific tables for each respective insurance type:
 
@@ -110,7 +110,8 @@ RENAME TO items;
 ```
 > Note: Check is used to make sure that the numerical value within the trip cost is always greater than zero. Also, alter table is used to update table names without having to delete the table and start over. 
 
-  #### 3. Insurance Tables  
+  **3. Insurance Tables** 
+  
 The next Group of tables to be created were the insurance tables for each respective insurance type (*Valuable items, event, travel*) The columns and rows included are within the tables in each are nearly identical as seen in the script below:
 
 
@@ -145,7 +146,8 @@ RENAME event_insurance_id TO e_insurance_id;
 ``` 
 >Note: it is important to see that while each table columns and rows are identical however they should have different and consistent names. This will help in the future when performing joins and be less confusing. 
 
-  #### 4. Policy Tables 
+  **4. Policy Tables** 
+  
 The last set of tables created is the policy tables. These Tables are what connect the customer table with all other tables for each specific insurance type.
 I will come back to elaborate on the relationships formed by the table later on in the blog post. 
 The table scrips follow below: 
@@ -210,7 +212,7 @@ The ERD shown in the image above shows a ternary relationship between the 3 tabl
 Now here comes the fun part, queries. I went through many queries from simple ones just to see if I could pull information from a table to my finalize queries that are shown below. The main objective is to create queries that might help answer certain business questions or at least provide value to the business. **It is extremely important to not lose sight of the business objective** 
 > Certain queries below will only run on Oracle due to features being specific to it, and will be noted 
 
-  ### **Query 1** 
+   **Query 1** 
 
 ```tsql 
 --Finding the Avererage deductible cost for each insurance type
@@ -288,6 +290,6 @@ ORDER BY c.l_name;
   
   This query followed query 3 by asking the user for a prompt, however it takes it a step further and asks for additional input. This is because we are using the between the function to create a range between two dates. This query produces results to show customer information based on their travel coverage start and end date.
  
-## Final Thoughts 
+## **Final Thoughts**
 
 Overall many trials and errors when trying to get everything working, but I'm happy with this current product. My goal future is to come back to this in the future with additional tools make improvements to the overall tables and create more efficient SQL scripts. I truly appreciate anyone who managed to make it to the end of this, I hope to present more projects on here soon. 
